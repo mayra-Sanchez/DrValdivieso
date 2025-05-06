@@ -1,0 +1,282 @@
+/* Navbar base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 15px 40px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Añadido para asegurar que los hijos se posicionen con base en este */
+}
+
+/* Left icons */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .icon {
+  color: white;
+  font-size: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar-left .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Center buttons */
+.navbar-center {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-center button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding: 5px 0;
+}
+
+.navbar-center button:hover {
+  color: #bfa046;
+  border-bottom: 2px solid #bfa046;
+}
+
+/* Language button */
+.lang-button {
+  background-color: #bfa046;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.lang-button:hover {
+  background-color: #e0c061;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  background: white;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+.modal-content {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.whatsapp-textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modal-submit-button, .modal-cancel-button, .modal-close-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.modal-submit-button {
+  background: #bfa046;
+  color: black;
+}
+
+.modal-submit-button:hover {
+  background: #e0c061;
+}
+
+.modal-cancel-button, .modal-close-button {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modal-cancel-button:hover, .modal-close-button:hover {
+  background: #ddd;
+}
+
+/* Animation for modal */
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+  }
+
+  .navbar-center {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      z-index: 2001; /* Asegura que esté por encima */
+  }
+
+  .navbar-center.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    z-index: 2001;
+  }
+  
+  .navbar-center button {
+      margin: 10px 0;
+      font-size: 16px;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .navbar-right {
+      margin-left: auto;
+  }
+
+  .modal {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  .map-container {
+      height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-left .icon {
+      font-size: 18px;
+      margin-right: 8px;
+  }
+
+  .lang-button {
+      padding: 5px 12px;
+      font-size: 12px;
+  }
+
+  .modal-header h2 {
+      font-size: 20px;
+  }
+
+  .map-container {
+      height: 200px;
+  }
+}

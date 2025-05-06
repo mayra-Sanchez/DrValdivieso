@@ -1,0 +1,194 @@
+.services-container {
+    background-color: #111;
+    color: white;
+    padding: 4rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    border: 2px solid #c1b688;
+    padding: 1rem 1rem;
+    display: inline-block;
+    border-radius: 25px;
+    position: relative;
+    animation: slideIn 1s ease-out;
+}
+
+.services-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 8px auto 0 auto;
+    border-radius: 5px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.service-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-image:hover {
+    transform: scale(1.05);
+}
+
+.service-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.service-title:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Línea dorada fija (siempre visible) */
+.service-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    /* Ancho de la línea (ajustable) */
+    height: 2px;
+    /* Grosor de la línea */
+    background-color: gold;
+    /* Color de la línea */
+    transform: translateX(-50%);
+    /* Centra horizontalmente */
+}
+
+.remote-message {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-out;
+}
+
+.remote-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #c1b688;
+}
+
+.remote-message p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .service-card {
+        width: 45%;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .remote-message {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .remote-message h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 1.5rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .service-title {
+        font-size: 0.9rem;
+    }
+
+    .remote-message {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    .remote-message h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

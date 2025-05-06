@@ -1,0 +1,222 @@
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
+/* Sección completa fondo negro */
+.casos-exito {
+  background-color: #111;
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* Franja superior blanca al 100% */
+.title-container {
+  background-color: white;
+  color: black;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.title-container .titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  animation: slideIn 1s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title-container .subtitulo {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Tarjetas sobre fondo negro */
+.tarjetas.grid-container {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #111;
+}
+
+/* Tarjeta dorada elegante */
+.tarjeta {
+  background-color: #111;
+  border: 2px solid #bfa046;
+  border-radius: 12px;
+  padding: 1.2rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(191, 160, 70, 0.5);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover img {
+  transform: scale(1.05);
+}
+
+/* Texto descripción */
+.descripcion {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
+/* 🎯 Carrusel por defecto oculto */
+.carousel-container {
+  display: none;
+}
+
+/* 🎯 Swiper slide centra tarjetas */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🎯 Flechas Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #bfa046 !important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+}
+
+/* ---- RESPONSIVE ---- */
+
+/* Móviles */
+@media (max-width: 480px) {
+  .title-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .title-container .titulo {
+    font-size: 1.4rem;
+  }
+
+  .title-container .subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .tarjetas {
+    padding: 2rem 1rem;
+  }
+
+  .tarjeta {
+    padding: 0.8rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .descripcion {
+    font-size: 0.88rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 14px;
+    color: #bfa046 !important;
+  }
+
+  /* Carrusel visible */
+  .carousel-container {
+    display: block;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .grid-container {
+    display: none !important;
+  }
+
+  .carousel-container {
+    display: block;
+    padding: 10px 5px;
+    width: 100%;
+  }
+
+  .swiper-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjeta {
+    width: 80%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #bfa046 !important;
+    font-size: 16px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 769px) {
+  .grid-container {
+    display: flex;
+  }
+
+  .carousel-container {
+    display: none;
+  }
+
+  .tarjeta {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .title-container .titulo {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .tarjeta p {
+    font-size: 1rem;
+  }
+}

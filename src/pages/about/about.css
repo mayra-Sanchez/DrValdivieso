@@ -1,0 +1,168 @@
+/* General container for about section */
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #2e2e2e;
+}
+
+/* Main title styling */
+.main-title {
+  font-size: 36px;
+  color: #4d4100;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  border-bottom: 2px solid #bfa345;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Container for the profile content */
+.profile-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Image container styling */
+.image-container {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.doctor-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text content container styling */
+.text-content {
+  flex: 2;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #6b561c;
+  margin-bottom: 12px;
+}
+
+/* Highlighted text styling */
+.highlight-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+/* Location text styling */
+.location {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Description text styling */
+.description p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.description strong {
+  color: #3c3102;
+}
+
+/* Divider styling */
+.divider {
+  margin: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/* Contact section styling */
+.contact-section {
+  text-align: left;
+}
+
+.contact-section .section-title {
+  margin-bottom: 10px;
+}
+
+/* WhatsApp button styling */
+.whatsapp-button {
+  background-color: #4f4600;
+  color: white;
+  padding: 10px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #6d5e13;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .contact-section {
+    text-align: center;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .highlight-text,
+  .location,
+  .description p {
+    font-size: 15px;
+  }
+
+  .whatsapp-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text-content {
+    padding: 0 10px;
+  }
+}
