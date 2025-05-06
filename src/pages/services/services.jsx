@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './services.css';
-import diseño from '../../assets/nuestros_servicios/diseno-sonrisa.jpg';
+import diseño from '../../assets/nuestros_servicios/diseno.jpg';
 import zirconio from '../../assets/nuestros_servicios/corona.png';
 import blanqueamiento from '../../assets/nuestros_servicios/blanqueamiento.png';
 import implantes from '../../assets/nuestros_servicios/implantes.png';
