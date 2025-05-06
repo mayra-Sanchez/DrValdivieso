@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import './Navbar.css';
+import './navbar.css';
 
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
