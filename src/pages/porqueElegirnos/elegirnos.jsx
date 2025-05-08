@@ -46,6 +46,7 @@ const Elegirnos = () => {
             <h2 className="section-title">{t("porque-elegirnos-titulo")}</h2>
             <div className="slider-container">
                 <button className="slider-arrow left-arrow" onClick={prevSlide}>&#10094;</button>
+
                 <div className="slider">
                     {slides.map((slide, index) => (
                         <div key={index} className={`slide ${index === currentSlide ? 'active' : ''}`}>
@@ -54,8 +55,10 @@ const Elegirnos = () => {
                         </div>
                     ))}
                 </div>
+
                 <button className="slider-arrow right-arrow" onClick={nextSlide}>&#10095;</button>
             </div>
+
         </div>
     );
 };
