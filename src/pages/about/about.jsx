@@ -7,7 +7,7 @@ const About = () => {
     const { t } = useTranslation();
 
     const handleWhatsAppClick = () => {
-        const phoneNumber = "+573000000000"; // Reemplaza con el número real
+        const phoneNumber = "+573216244439"; // Reemplaza con el número real
         const message = t('whatsapp-message');
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');

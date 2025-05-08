@@ -1,168 +1,219 @@
-/* General container for about section */
+/* Variables de color */
+:root {
+  --gold-primary: #bfa345;
+  --gold-dark: #4d4100;
+  --gold-button: #4f4600;
+  --gold-button-hover: #6d5e13;
+  --text-dark: #2e2e2e;
+  --text-medium: #444;
+  --white: #ffffff;
+}
+/* Estilos base */
 .about-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
-  background-color: #ffffff;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  color: #2e2e2e;
+  padding: 5rem 2rem;
+  background-color: var(--white);
+  color: var(--text-dark);
+  text-align: center; /* Añadido para centrado general */
 }
 
-/* Main title styling */
+/* Título principal - MEJORA DE CENTRADO */
 .main-title {
-  font-size: 36px;
-  color: #4d4100;
-  text-align: center;
-  margin-bottom: 40px;
+  font-size: 2.8rem;
+  color: var(--gold-dark);
+  margin: 0 auto 3.5rem;
   font-weight: 600;
-  border-bottom: 2px solid #bfa345;
-  display: inline-block;
-  padding-bottom: 5px;
+  border-bottom: 2px solid var(--gold-primary);
+  padding-bottom: 0.5rem;
+  display: block; /* Cambiado de inline-block a block */
+  width: fit-content; /* Asegura que el ancho se ajuste al contenido */
+  text-align: center; /* Centrado del texto */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Centrado preciso */
 }
 
-/* Container for the profile content */
+/* Resto del CSS se mantiene igual */
 .profile-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 4rem;
   align-items: flex-start;
   justify-content: center;
+  text-align: left; /* Restablece alineación para el contenido */
 }
 
-/* Image container styling */
+/* Contenedor de imagen */
 .image-container {
   flex: 1;
-  min-width: 280px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .doctor-image {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
   object-fit: cover;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
 }
 
-/* Text content container styling */
+.image-container:hover .doctor-image {
+  transform: scale(1.03);
+}
+
+/* Contenido de texto */
 .text-content {
-  flex: 2;
-  min-width: 300px;
-  max-width: 600px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 650px;
 }
 
-/* Section title styling */
+/* Títulos de sección */
 .section-title {
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: 500;
-  color: #6b561c;
-  margin-bottom: 12px;
+  color: var(--gold-dark);
+  margin-bottom: 1.2rem;
 }
 
-/* Highlighted text styling */
+/* Texto destacado */
 .highlight-text {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #000;
-  margin-bottom: 4px;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
 }
 
-/* Location text styling */
+/* Ubicación */
 .location {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-medium);
 }
 
-/* Description text styling */
+/* Descripción */
 .description p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 16px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-medium);
 }
 
 .description strong {
-  color: #3c3102;
+  color: var(--gold-dark);
 }
 
-/* Divider styling */
+/* Divisor */
 .divider {
-  margin: 30px 0;
-  border-top: 1px solid #ccc;
+  margin: 2.5rem 0;
+  border-top: 1px solid #ddd;
 }
 
-/* Contact section styling */
+/* Sección de contacto */
 .contact-section {
   text-align: left;
 }
 
-.contact-section .section-title {
-  margin-bottom: 10px;
-}
-
-/* WhatsApp button styling */
+/* Botón de WhatsApp (estilo original) */
 .whatsapp-button {
-  background-color: #4f4600;
-  color: white;
-  padding: 10px 26px;
-  font-size: 16px;
+  background-color: var(--gold-button);
+  color: var(--white);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 .whatsapp-button:hover {
-  background-color: #6d5e13;
+  background-color: var(--gold-button-hover);
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .about-container {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+  
+  .profile-content {
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .about-container {
+    padding: 3.5rem 1.5rem;
+  }
+  
   .profile-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 2.5rem;
   }
-
+  
   .text-content {
-    max-width: 100%;
+    text-align: center;
   }
-
+  
   .contact-section {
     text-align: center;
   }
-
+  
   .whatsapp-button {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .main-title {
-    font-size: 28px;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
-
+  
   .section-title {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
-
-  .highlight-text,
-  .location,
+  
+  .highlight-text {
+    font-size: 1.1rem;
+  }
+  
   .description p {
-    font-size: 15px;
+    font-size: 1rem;
   }
-
+  
   .whatsapp-button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
   }
-
+  
   .image-container {
-    width: 100%;
-    max-width: 100%;
+    min-width: 100%;
   }
+}
 
-  .text-content {
-    padding: 0 10px;
+@media (max-width: 400px) {
+  .about-container {
+    padding: 3rem 1rem;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
   }
 }

@@ -6,7 +6,6 @@
   background-color: #000;
   padding: 15px 40px;
   color: white;
-  font-family: 'Segoe UI', sans-serif;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,7 +16,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   position: relative; /* Añadido para asegurar que los hijos se posicionen con base en este */
 }

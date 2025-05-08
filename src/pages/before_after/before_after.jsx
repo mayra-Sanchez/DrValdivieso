@@ -34,7 +34,7 @@ const BeforeAfter = () => {
             <div className="before-after-title">{t('antes-despues')}</div>
 
             {/* Carrusel para pantallas pequeñas */}
-            <div className="carousel-container">
+            <div className="before-after-carousel">
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={1}

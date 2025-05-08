@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     const handleWhatsappSubmit = () => {
-        const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/573216244439?text=${encodeURIComponent(whatsappMessage)}`;
         window.open(whatsappUrl, '_blank');
         setWhatsappMessage('');
         setIsWhatsappModalOpen(false);
@@ -50,14 +50,14 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-left">
-                    <FaMapMarkerAlt 
-                        className="icon" 
-                        onClick={() => setIsMapModalOpen(true)} 
+                    <FaMapMarkerAlt
+                        className="icon"
+                        onClick={() => setIsMapModalOpen(true)}
                         title={t('office-location')}
                     />
-                    <FaWhatsapp 
-                        className="icon" 
-                        onClick={() => setIsWhatsappModalOpen(true)} 
+                    <FaWhatsapp
+                        className="icon"
+                        onClick={() => setIsWhatsappModalOpen(true)}
                         title={t('whatsapp-message')}
                     />
                 </div>
@@ -95,20 +95,20 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className="modal-content">
-                    <MapContainer 
-                        center={[40.748817, -73.985428]} 
-                        zoom={15} 
+                    <MapContainer
+                        center={[3.375264, -76.535574]}
+                        zoom={15}
                         style={{ height: '400px', width: '100%' }}
                         className="map-container"
                     >
-                        <TileLayer 
+                        <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         />
-                        <Marker position={[40.748817, -73.985428]}>
+                        <Marker position={[3.374645, -76.538774]}>
                             <Popup>
                                 <h3>{t('oficina-principal')}</h3>
-                                <p>{t('direccion')}</p>
+                                <p>Centro Comercial Unicentro, edificio oasis, consultorio 606D<br />Cali, Colombia</p>
                             </Popup>
                         </Marker>
                     </MapContainer>

@@ -8,6 +8,7 @@ import CasosExito from './pages/casos_exito/casos_exito';
 import Footer from './pages/components/footer/footer';
 import Navbar from './pages/components/navbar/navbar';
 import '../src/pages/i18n';
+import Elegirnos from './pages/porqueElegirnos/elegirnos';
 
 function App() {
     // const [selectedLanguage, setSelectedLanguage] = useState(
@@ -54,6 +55,10 @@ function App() {
 
             <section id="caos_estudio" className="section">
                 <CasosExito></CasosExito>
+            </section>
+
+            <section id="elegirnos" className="section">
+                <Elegirnos></Elegirnos>
             </section>
 
             <Footer></Footer>
