@@ -11,7 +11,7 @@ import mujer1 from '../../assets/casos_exitos/IMG_0852.JPG';
 import hombre from '../../assets/casos_exitos/hombre.png';
 import mujer2 from '../../assets/casos_exitos/IMG_1745.JPG';
 import mujer3 from '../../assets/casos_exitos/IMG_1055.JPG';
-import mujer4 from '../../assets/casos_exitos/IMG_1639.JPG';
+import mujer4 from '../../assets/casos_exitos/IMG_1639.jpg';
 
 const CasosExito = () => {
   const { t } = useTranslation();
