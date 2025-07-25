@@ -35,7 +35,7 @@ const Footer = () => {
             <footer className="footer">
                 <div className="contact">
                     <h2>{t("contactame")}</h2>
-                    <p>maria@gmail.com</p>
+                    <p>valdiviesomariafernanda@gmail.com</p>
                     <p>321 624 4439</p>
                 </div>
 
